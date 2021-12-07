@@ -21,7 +21,7 @@
 
   <div class="post-inner thin">
     <div class="entry-content">
-      {{ with .Site.Params.blog.heading }}
+      {{ with .Site.Params.blog.heading}}
       <div class="wp-block-group alignwide">
         <div class="wp-block-group__inner-container">
           <h2 class="has-text-align-center">{{ . | markdownify }}</h2>
@@ -29,22 +29,42 @@
       </div>
       {{ end }}
       <div class="wp-block-columns columns alignwide">
-        {{ range (where .Site.RegularPages "Section" "blog")}}
+        {{ range (where .Site.RegularPages "Section" "food-menu")}}
         <div class="column">
           <div class="wp-block-group">
             <div class="wp-block-group__inner-container">
               <figure class="wp-block-image alignfull size-full"><img src="{{ .Params.Image |absURL }}"
                   alt="{{.Title }}" class="wp-image-37" /></figure>
               <h3>{{ .Title }}</h3>
-              <p>{{ .PublishDate.Format "January 02, 2006"}}</p>
               <div class="wp-block-button is-style-outline"><a class="wp-block-button__link"
-                  href="{{ .Permalink }}">Read More</a></div>
+                  href="{{ .Permalink }}">Check Menu</a></div>
             </div>
           </div>
         </div>
         {{ end }}
       </div>
-
+     {{ with .Site.Params.blog.heading2}}
+     <div class="wp-block-group alignwide">
+       <div class="wp-block-group__inner-container">
+         <h2 class="has-text-align-center">{{ . | markdownify }}</h2>
+       </div>
+     </div>
+     {{ end }} 
+      <div class="wp-block-columns columns alignwide">
+        {{ range (where .Site.RegularPages "Section" "drink-menu")}}
+        <div class="column">
+          <div class="wp-block-group">
+            <div class="wp-block-group__inner-container">
+              <figure class="wp-block-image alignfull size-full"><img src="{{ .Params.Image |absURL }}"
+                  alt="{{.Title }}" class="wp-image-37" /></figure>
+              <h3>{{ .Title }}</h3>
+              <div class="wp-block-button is-style-outline"><a class="wp-block-button__link"
+                  href="{{ .Permalink }}">Check Menu</a></div>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
       {{ if .Site.Params.call_to_action.enable }}
       {{ with .Site.Params.call_to_action }}
       <div class="wp-block-group alignwide has-background" style="background-color:#ffffff">
