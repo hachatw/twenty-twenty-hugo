@@ -14,6 +14,8 @@
         <!-- .entry-categories-inner -->
       </div><!-- .entry-categories -->
       <h2 class="entry-title heading-size-1">{{ .Title }}</h2>
+      <!-- 
+
       <div class="post-meta-wrapper post-meta-single post-meta-single-top">
         <ul class="post-meta">
           <li class="post-author meta-wrapper">
@@ -53,9 +55,13 @@
                   {{ .Title }}</span></a> </span>
           </li>
         </ul>
-      </div><!-- .post-meta-wrapper -->
+      </div>
+    -->
+      <!-- .post-meta-wrapper -->
+
     </div><!-- .entry-header-inner -->
   </header><!-- .entry-header -->
+  <!-- close featured-media-->
   {{if .Params.Image }}
   <figure class="featured-media">
     <div class="featured-media-inner section-inner medium">
@@ -67,8 +73,9 @@
   {{end}}
   <div class="post-inner thin ">
     <div class="entry-content">
-      {{ .Content }}
+      {{.Content}}
     </div><!-- .entry-content -->
+    
   </div><!-- .post-inner -->
 
   <div class="section-inner {{if not .Params.Tags}}d-none{{end}}">
@@ -97,6 +104,7 @@
         {{ template "_internal/disqus.html" . }}
       </div>
       {{ end }}
+ 
     </div><!-- .post-meta-wrapper -->
   </div><!-- .section-inner -->
 </article>
