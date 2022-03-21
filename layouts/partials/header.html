@@ -39,6 +39,10 @@
           {{ range .Site.Menus.desktop }}
           <li class="menu-item"><a href="{{ .URL | absURL }}" aria-current="page">{{ .Name }}</a></li>
           {{ end }}
+            {{ range $.Site.Home.AllTranslations }}
+            <li class="menu-item"><a href="{{ .Permalink }}" aria-current="page">{{ .Language.LanguageName }}</a></li>
+            {{ end }}
+            </ul>
         </ul>
       </nav><!-- .primary-menu-wrapper -->
 
