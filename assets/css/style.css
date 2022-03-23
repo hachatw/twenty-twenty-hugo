@@ -5653,7 +5653,7 @@ a.to-the-top>* {
 		margin-bottom: 0;
 	}
 
-	.wp-block-columns.alignwide+.wp-block-coddlumns.alignwide,
+	.wp-block-columns.alignwide+.wp-block-columns.alignwide,
 	.wp-block-columns.alignfull+.wp-block-columns.alignfull {
 		margin-top: -2.8rem;
 	}
@@ -6470,23 +6470,18 @@ a.to-the-top>* {
 	display: flex;
 	flex-wrap: wrap;
 }
-.column-text {
-	width: 100%;
-	-ms-flex: 0 0 0 33%;
-		flex: 0 0 0 33%;
-}
+
 .column {
 	width: 100%;
-	-ms-flex: 0 0 0 33%;
-		flex: 0 0 0 33%;
-		max-width: 33%;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 @media (min-width: 768px) {
 	.column {
-		-ms-flex: 0 0 0 33%;
-		flex: 0 0 0 33%;
-		max-width: 33%;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
 	}
 }
 
