@@ -17,10 +17,11 @@
   
       <div class="header-titles">
         <div class="site-title faux-heading"><a href="{{ .Site.BaseURL }}">
-        {{ with.Site.Params.banners.image}}
+        {{ with.Site.Params.logo.image}}
         <figure class="featured-media">
           <div class="featured-media-inner section-inner">
             <img width="90" height="9" src="{{ . | absURL }}"
+              class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
               sizes="(max-width: 120px) 10vw, 120px" />
           </div>
         </figure>
