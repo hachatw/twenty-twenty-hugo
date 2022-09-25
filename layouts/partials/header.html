@@ -14,8 +14,19 @@
           <span class="toggle-text">Search</span>
         </span>
       </button><!-- .search-toggle -->
+  
       <div class="header-titles">
-        <div class="site-title faux-heading"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></div>
+        <div class="site-title faux-heading"><a href="{{ .Site.BaseURL }}">
+        {{ with.Site.Params.banners.image}}
+        <figure class="featured-media">
+          <div class="featured-media-inner section-inner">
+            <img width="90" height="9" src="{{ . | absURL }}"
+              sizes="(max-width: 120px) 10vw, 120px" />
+          </div>
+        </figure>
+        {{end}}
+          
+        </a></div>
       </div><!-- .header-titles -->
 
       <button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"

@@ -1367,7 +1367,7 @@ ul.social-icons li {
 
 .header-inner {
 	max-width: 168rem;
-	padding: 3.15rem 0;
+	padding: 0.75rem 0;
 	z-index: 100;
 }
 
@@ -2606,7 +2606,7 @@ h2.entry-title {
 }
 
 .post-inner {
-	padding-top: 5rem;
+	padding-top: 1rem;
 }
 
 .reduced-spacing.missing-post-thumbnail .post-inner {
