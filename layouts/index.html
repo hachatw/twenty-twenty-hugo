@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+<!--
+
 <article class="post-20 page type-page status-publish has-post-thumbnail hentry" id="post-20">
   {{ with .Site.Params.banner.heading }}
   <header class="entry-header has-text-align-center header-footer-group">
@@ -20,6 +22,7 @@
   </figure>
   {{end}}
 
+
   {{ with .Site.Params.event.heading2 }}
   <div class="wp-block-group alignwide">
     <div class="wp-block-group__inner-container">
@@ -27,14 +30,23 @@
     </div>
   </div>
   {{ end }}
+-->
+
 
   <div class="post-inner thin">
     <div class="entry-content">  
-  <figure class="wp-block-gallery alignwide columns-3 is-cropped">
+
+      <div class="has-social-menu">
+        <nav aria-label="Social links" class="footer-social-wrapper">
+          {{partial "social.html" .}}
+        </nav>
+      </div><!-- .footer-top -->
+
+  <figure class="wp-block-gallery alignwide columns-4 is-cropped">
     <ul class="blocks-gallery-grid">
       {{ range (where .Site.RegularPages "Section" "menus")}}
       <li class="blocks-gallery-item">
-        <figure class="wp-block-image alignfull size-full"><a class="image-link"
+        <figure class="wp-block-image alignfull"><a class="image-link"
           href="{{ .Permalink }}"><img src="{{ .Params.Image |absURL }}"
           alt="{{.Title }}" class="wp-image-37" /></a></figure>
       </li>
