@@ -35,6 +35,9 @@
 
   <div class="post-inner thin">
     <div class="entry-content">  
+      <div>
+        {{ "<!--Hello friend looking for source code? just check here: https://github.com/hachatw/-->" | safeHTML }}
+      </div>
 
       <div class="has-social-menu">
         <nav aria-label="Social links" class="footer-social-wrapper">
@@ -57,9 +60,9 @@
 
       <div class="wp-block-columns columns alignwide">
         {{ range (where .Site.RegularPages "Section" "menus")}}
-        <div class="column">
+        <lu class="menu-column">
               <h4><a href="{{.Permalink}}">{{ .Title }}</a></h4>
-        </div>
+        </lu>
         {{ end }}
       </div>
 
