@@ -1,18 +1,19 @@
 {{ define "main" }}
 
 <article class="page type-page status-publish hentry">
-  <header class="entry-header has-text-align-center header-footer-group">
-    <div class="entry-header-inner section-inner medium">
-      <h1 class="entry-title">{{ .Title }}</h1>
+	<header class="entry-header has-text-align-center header-footer-group">
+		<div class="entry-header-inner section-inner medium">
+			<h1 class="entry-title">{{ .Title }}</h1>
+		</div>
+	</header>
+	<div class="post-inner thin">
+		<div class="entry-content">
+			{{ .Content }}
     </div>
-  </header>
-
-  <div class="post-inner thin">
-    <div class="entry-content">
-      {{ .Content }}
-    <img src="{{`images/traffic.png` | absURL}}" class="img-fluid" alt="section-bg">
-    </div>
-  </div>
+    <figure class="wp-block-image alignfull size-full">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.728998254735!2d121.44658491500918!3d25.17862688390484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af7b40a14f29%3A0x56c22d41779462f2!2z6buRIOWuoiDojLboiJYgaGFja2VyJ3MgY2FzYSBkZSBjaGE!5e0!3m2!1szh-TW!2stw!4v1678420023411!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </figure> 
+	</div>
 </article>
 
 {{ end }}
