@@ -67,7 +67,17 @@
   <div class="post-inner thin ">
     <div class="entry-content">
       {{.Content}}
-      <img src="{{ .Params.Image |absURL }}"/>
+      <figure class="wp-block-gallery alignwide columns-3 is-cropped">
+        <ul class="blocks-gallery-grid">
+          {{ range (where .Site.RegularPages "Section" "menus")}}
+          <li class="blocks-gallery-item">
+            <figure class="wp-block-image alignfull size-full"><a class="image-link"
+              href="{{ .Permalink }}"><img src="{{ .Params.Image |absURL }}"
+              alt="{{.Title }}" class="wp-image-37" /></a></figure>
+          </li>
+          {{ end }}
+        </ul>
+      </figure>
     </div><!-- .entry-content -->
      
   </div><!-- .post-inner -->
